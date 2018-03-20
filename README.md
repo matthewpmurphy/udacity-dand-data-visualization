@@ -19,4 +19,11 @@ This attempt turned into a jumbled mess.  There were 28 airlines, and the line c
 
 Now that I was down to 5 airlines, it was much easier to view the trends.  It shows how various airlines improved or worsened over time, and which ones were currently performing the best, as of 2017.  It also showed the general trends that all of the selected airlines experienced: a dip in performance from 2006 to 2008, individual peaks from 2010 to 2012, another drop from 2012 to 2014, and now an uptick from 2014 through 2017.
 
-I decided to display the performance trends rather than gross number of flights, as I was more interested in the question, "Which airlines are you more likely to be on time with?"
+I went with performance trends for display as that was the more interesting question.  Who is the most reliable airline that will get me there on-time?
+
+#### Data Visualization With Dimple
+
+The visualization was implemented it with **D3.js** and **dimple.js**.  I thought line charts would work well with this data.  I had an X and Y axis with 5 sets of data points to overlay.  I'm not sure another type of chart would have been readable.  I started with an example and it was all pretty standard.  I put the legend in the top right and decided to start the Y axis at 70% instead of zero.  I felt that if the Y axis went from 0 to 100 it would be too difficult to read.  Otherwise, I did not add much styling.  The first  version can be viewed at `index-initial.html`, or below:
+
+![Initial Visualizatino](./img/first_visualization.png)
+
