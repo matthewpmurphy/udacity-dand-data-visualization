@@ -66,8 +66,8 @@ agg <- ef %>%
   summarize(monthly_avg = mean(arrivals),
             arrivals = sum(arrivals))
 
-# pull 75th percentile, by monthly average arrivals
-selected_carriers <- subset(agg, monthly_avg >= quantile(monthly_avg, 0.81))$carrier_name
+# pull 85th percentile, by monthly average arrivals
+selected_carriers <- subset(agg, monthly_avg >= quantile(monthly_avg, 0.85))$carrier_name
 selected_carriers
 
 ```
