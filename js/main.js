@@ -1,11 +1,16 @@
 (function($) {
   'use strict'
 
+  //format decimals to 0 places ie 80%
   var formatPercent = d3.format('.0%')
 
+  //Draw our chart, takes dataset as argument
   var draw = (data) => {
+      //set the width to 100% of it's container, set height to a fixed number
       var width = "100%",
           height = 800;
+
+      //initialize the chart and attach it to the #chart div
       var svg = dimple.newSvg('#chart', width, height);
       var myChart = new dimple.chart(svg, data);
 
@@ -26,7 +31,10 @@
       // set series and legend
       var s = myChart.addSeries('Carrier Name', dimple.plot.scatter);
       var p = myChart.addSeries('Carrier Name', dimple.plot.line);
-      var legend = myChart.addLegend("10%", "5%", "80%", "20%", "right");
+      var legend = myChart.addLegend("10%", "5%", "80%", "50%", "right");
+
+      // increase legend size
+      legend.fontSize = 15;
 
       // draw
       myChart.draw();
@@ -58,6 +66,7 @@
     });
   }
 
+  //Use D3 to load CSV file and use `draw` callback
   var createViz = () => {
     d3.csv("/data/data.csv", function(d) {
       return {
@@ -72,6 +81,7 @@
     });
   }
 
+  //load data and render chart when doc loads
   createViz();
 
 }).apply(this, [jQuery]);

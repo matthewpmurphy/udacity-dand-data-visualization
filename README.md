@@ -65,6 +65,8 @@ After considering the feedback and some of my own thoughts, I implemented the fo
 - I changed the legend to a horizontal one at the top right.  I find that less distracting.
 - Formatted percentages along the Y axis to remove unnecessary zeroes
 - I updated the tooltip variable names
+- I increased the font size of the tooltips
+- I increased the legend size
 
 You can see the final version at `index.html` or by looking at the image below:
 

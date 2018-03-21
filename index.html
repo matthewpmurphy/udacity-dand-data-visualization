@@ -1,19 +1,33 @@
+<!--
+    Udacity - Make Effective Data Visualization
+    This page contains a chart showing the top airlines on-time arrival percentages
+-->
 <html>
     <head>
         <meta charset="utf-8">
         <title>On-Time Arrivals, 2003-2017</title>
+        <!-- Load Bootstrap for styling -->
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
+        <style>
+            .dimple-custom-tooltip-label {
+                font-size: 14 !important;
+            }
+        </style>
     </head>
     <body>
         <h2 class="text-center">On-Time Arrival Percentages for Top U.S. Domestic Airlines (2003-2017)</h2>
         <div class="row">
             <div id="chart" class="col-md-12">
-
+                <!-- Chart area -->
             </div>
         </div>
     </body>
 </html>
+<!-- Load d3 -->
 <script src="http://d3js.org/d3.v4.min.js"></script>
+<!-- Load dimple -->
 <script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js"></script>
+<!-- Load Jquery -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<!-- Load Custom JS -->
 <script src="/js/main.js"></script>
