@@ -36,6 +36,9 @@
       // increase legend size
       legend.fontSize = 15;
 
+      // incrase tooltip fontsize
+      p.tooltipFontSize = 14;
+
       // draw
       myChart.draw();
 
