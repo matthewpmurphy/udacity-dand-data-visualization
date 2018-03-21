@@ -28,29 +28,23 @@
         var svg = dimple.newSvg('#content', 960, 640);
         var myChart = new dimple.chart(svg, data);
 
-        //set x axis to year field
+        //set x axis
         var x = myChart.addTimeAxis('x', 'year');
-        //add format for year (4 digits)
         x.tickFormat = '%Y';
-        //add label to x axis
         x.title = 'Year';
 
-        //set y axis to on_time field
+        //set y axis
         var y = myChart.addMeasureAxis('y', 'on_time');
-        //format the values of the y axis as a percentage
         y.tickFormat = '%';
-        //set the y axis min and max to our values
         y.overrideMin = minY;
         y.overrideMax = maxY;
-        //add label to y axis
         y.title = 'Percentage of Arrivals on Time (within 15 minutes)';
 
-        //add line plot for our data
+        //Add series and legend
         myChart.addSeries('carrier_name', dimple.plot.line);
-        //add scattter plot for our data
         myChart.addSeries('carrier_name', dimple.plot.scatter);
-        //add the legend
         myChart.addLegend(width*0.65, 75, width*0.25, 75, 'right');
+
         //render the chart
         myChart.draw();
     }
