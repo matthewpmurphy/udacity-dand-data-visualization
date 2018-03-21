@@ -1,6 +1,8 @@
 (function($) {
   'use strict'
 
+  var formatPercent = d3.format('.0%')
+
   var draw = (data) => {
       var width = "100%",
           height = 800;
@@ -11,7 +13,7 @@
       var minY = 0.70,
           maxY = .90;
       var y = myChart.addMeasureAxis('y', 'On Time');
-      y.tickFormat = '%';
+      y.tickFormat = formatPercent;
       y.overrideMin = minY;
       y.overrideMax = maxY;
       y.title = 'Percentage of Arrivals on Time (within 15 minutes)';
@@ -67,7 +69,6 @@
     }, function(data) {
       // set svg
       draw(data);
-      events();
     });
   }
 

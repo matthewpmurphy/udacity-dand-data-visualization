@@ -25,5 +25,59 @@ I went with performance trends for display as that was the more interesting ques
 
 The visualization was implemented it with **D3.js** and **dimple.js**.  I thought line charts would work well with this data.  I had an X and Y axis with 5 sets of data points to overlay.  I'm not sure another type of chart would have been readable.  I started with an example and it was all pretty standard.  I put the legend in the top right and decided to start the Y axis at 70% instead of zero.  I felt that if the Y axis went from 0 to 100 it would be too difficult to read.  Otherwise, I did not add much styling.  The first  version can be viewed at `index-initial.html`, or below:
 
-![Initial Visualizatino](./img/first_visualization.png)
+![Initial Visualization](./img/first_visualization.png)
 
+### Feedback
+
+I talked to three different people and asked for feedback on the data visualization.  I gave them a brief description of the information and asked all three the same questions.
+
+* What do you notice in the visualization?
+* What questions do you have about the data?
+* What relationships do you notice?
+* What do you think is the main takeaway from this visualization?
+* Is there something you don’t understand in the graphic?
+
+I have listed their feedback below
+
+> I think it looks nice.  I like the colors, they stand out to me.
+> There are a lot of extra zeroes in the percentages to the left.  That looks off to me.
+> I noticed the airlines all seem to rise and fall together.
+> That I want to fly Delta.
+
+> I wish the individual trend lines would stand out a bit more.  At points, they seemed a bit muddled together.
+> I see a lot of empty space.  I wonder if the chart could be a little more focused and easier to read
+> The airlines are mostly clustered together for the most part.
+> Delta may be a bit of an outlier.  The others are clustered together so it's a pretty even race.
+
+> I like the interactive graphic.  I would like more details when hover over a data point.
+> I have a hard time not focusing on the present day.  Delta at the top?  I wouldn't have expected that.
+> The way airlines rise and fall together makes me wonder what the root cause of that is.  I would like to see that analysis.
+> It would be nice if the lines were bigger and easier to follow.
+
+### Post-feedback Design
+
+After considering the feedback and some of my own thoughts, I implemented the following changes:
+
+- I added a `mouseover` event for the lines, so it would 'pop' it out and emphasize the path.  This would allow for better understanding of each individual airline's trend from 2003 to 2017.
+- I muted the grid lines to help the lines stand out more.
+- I allowed the chart to expand to the width of its container and expanded the height.
+- I focused the range more 70% to 90% to help better see the data
+- I changed the legend to a horizontal one at the top right.  I find that less distracting.
+- Formatted percentages along the Y axis to remove unnecessary zeroes
+- I updated the tooltip variable names
+
+You can see the final version at `index.html` or by looking at the image below:
+
+![Final Visualization](./img/final_visualization.png)
+
+### Resources
+
+- [dimple.js Documentation](http://dimplejs.org/)
+- [D3 Documentation](https://github.com/d3/d3/wiki)ri
+- [Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
+- [Bureau of Transportation Statistics](https://www.transtats.bts.gov/OT_Delay/OT_DelayCause1.asp)
+
+### Data
+
+- `data/873572440_122017_237_airline_delay_causes`: original dataset
+- `data/data.csv`: cleaned and truncated dataset
