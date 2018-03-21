@@ -76,6 +76,7 @@ You can see the final version at `index.html` or by looking at the image below:
 - [D3 Documentation](https://github.com/d3/d3/wiki)ri
 - [Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
 - [Bureau of Transportation Statistics](https://www.transtats.bts.gov/OT_Delay/OT_DelayCause1.asp)
+- [StackOverflow](https://stackoverflow.com/questions/10201841/display-y-axis-as-percentages)
 
 ### Data
 
